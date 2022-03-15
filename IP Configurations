@@ -1,0 +1,35 @@
+1. WAN IP Setup
+ip address
+#add address=103.100.0.2/30 interface=ether1
+
+
+
+2. LAN IP Setup
+->ip address
+#add address=192.168.1.1/24 interface=ether2
+
+
+To show the listed Ip:
+#print
+
+To disable any of the Listed IP:
+#disalbe 0 (number from the list of ip which we want to disable)
+
+To enable the disable IP:
+#enable 0
+
+To edit any IP:
+#edit 1
+#value-name: address (which colum we want to edit)
+#print
+
+To Remove any of the Listed IP:
+#remove 0
+
+3.To add default Getway:
+#ip route
+#add dst-address=0.0.0.0/0 gateway=103.100.0.1
+
+4.To add SrcNat:
+#ip firewall nat
+#add chain=srcnat action=masquerade
